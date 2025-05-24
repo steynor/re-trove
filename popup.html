@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Retrove</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        width: 320px;
+        padding: 20px;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(to bottom, #ffffff, #f8faf8);
+        margin: 0;
+      }
+      h3 {
+        color: #2c7a4d;
+        margin: 0 0 20px 0;
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+        letter-spacing: 0.5px;
+        text-shadow: 1px 1px 2px rgba(44, 122, 77, 0.1);
+      }
+      .leaf-icon {
+        color: #2c7a4d;
+        margin-left: 5px;
+      }
+      button {
+        background: linear-gradient(45deg, #2c7a4d, #3a8a5f);
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 8px;
+        cursor: pointer;
+        width: 100%;
+        margin: 10px 0;
+        font-family: "Poppins", sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        transition: transform 0.2s, box-shadow 0.2s;
+        box-shadow: 0 2px 4px rgba(44, 122, 77, 0.2);
+      }
+      button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba(44, 122, 77, 0.3);
+        background: linear-gradient(45deg, #246840, #2c7a4d);
+      }
+      button:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 4px rgba(44, 122, 77, 0.2);
+      }
+      #result {
+        display: none;
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        white-space: pre-wrap;
+        margin-top: 15px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        font-size: 14px;
+        line-height: 1.6;
+        border: 1px solid rgba(44, 122, 77, 0.1);
+      }
+      #result:not(:empty) {
+        display: block;
+      }
+      .loading {
+        display: none;
+        text-align: center;
+        margin: 15px 0;
+        color: #2c7a4d;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .error {
+        display: none;
+        color: #e74c3c;
+        margin: 15px 0;
+        padding: 10px;
+        background: #fdf0ef;
+        border-radius: 6px;
+        font-size: 14px;
+        text-align: center;
+      }
+      .logo-container {
+        text-align: center;
+        margin-bottom: 15px;
+      }
+    </style>
+    <script src="config.js"></script>
+    <script src="popup.js" defer></script>
+  </head>
+  <body>
+    <div class="logo-container">
+      <h3>Retrove<span class="leaf-icon">&#127793;</span></h3>
+    </div>
+    <button id="checkBtn">Analyze This Page</button>
+    <div id="loading" class="loading">Analyzing...</div>
+    <div id="error" class="error"></div>
+    <pre id="result"></pre>
+  </body>
+</html>
