@@ -31,7 +31,7 @@ document.getElementById("checkBtn").addEventListener("click", async () => {
       throw new Error("Could not find product information on this page");
     }
 
-    const prompt = `Analyze this product page and estimate environmental savings from buying it second-hand. Find the materials, dimensions, and product type from the text, then calculate CO2 and water savings. In the explanation, I want you to include the dimensions and materials of the product.
+    const prompt = `Analyze this product page and estimate environmental savings from buying it second-hand. Find the materials, dimensions, and product type from the text, then calculate CO2 and water savings. In the explanation, I want you to include the dimensions and materials of the product but with a maximum of 60 words.
     Format as:
     💨 [X] kg CO2 saved,
     💧 [X] liters water saved,
